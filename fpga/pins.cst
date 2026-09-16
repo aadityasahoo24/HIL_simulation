@@ -1,0 +1,34 @@
+// Tang Nano 20K Pin Constraints (.cst) for HIL Simulator
+// Adjust pin numbers based on your exact breakout wiring / header layout
+
+// System Clock (27MHz onboard oscillator on Tang Nano 20K)
+IO_LOC "clk" 4;
+IO_PORT "clk" PULL_MODE=UP;
+
+// Active-low Reset Button (S1 or S2 button on Tang Nano 20K board)
+IO_LOC "rst_n" 88;
+IO_PORT "rst_n" PULL_MODE=UP;
+
+// Control Effort Input from ESP32-S3 PWM output (8-bit bus mapped to GPIO headers)
+IO_LOC "pwm_in[0]" 17;
+IO_LOC "pwm_in[1]" 18;
+IO_LOC "pwm_in[2]" 19;
+IO_LOC "pwm_in[3]" 20;
+IO_LOC "pwm_in[4]" 21;
+IO_LOC "pwm_in[5]" 39;
+IO_LOC "pwm_in[6]" 40;
+IO_LOC "pwm_in[7]" 41;
+IO_PORT "pwm_in[0]" PULL_MODE=DOWN;
+IO_PORT "pwm_in[1]" PULL_MODE=DOWN;
+IO_PORT "pwm_in[2]" PULL_MODE=DOWN;
+IO_PORT "pwm_in[3]" PULL_MODE=DOWN;
+IO_PORT "pwm_in[4]" PULL_MODE=DOWN;
+IO_PORT "pwm_in[5]" PULL_MODE=DOWN;
+IO_PORT "pwm_in[6]" PULL_MODE=DOWN;
+IO_PORT "pwm_in[7]" PULL_MODE=DOWN;
+
+// Simulated Encoder Position Output to ESP32-S3
+IO_LOC "enc_pos[0]" 42;
+IO_LOC "enc_pos[1]" 51;
+IO_LOC "enc_pos[2]" 52;
+IO_LOC "enc_pos[3]" 53;
